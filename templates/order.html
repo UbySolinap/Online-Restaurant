@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "header.html" %}
+</head>
+<body>
+    <section class="order-form">
+        <div class="container">
+            <div class="row">
+                <form class="form-list col-lg-6" action="{{ url_for('order') }}" method="post">
+                    <div class="order-list">
+                        <div class="breakfast-list">
+                            <h1 class="order-header">Breakfast:</h1>
+                            {% for b in breakfast %}
+                                <input class="quantity-bar" type="number" id="{{ b.food_name }}_quantity" name="{{ b.food_name }}_quantity" min="1" max="100" value="1">
+                                <input class="check-box" type="checkbox" id="{{ b.food_name }}" name="{{ b.food_name }}" value="{{ b.food_price }}-{{ b.food_name }}">
+                                <label for="{{ b.food_name }}"> {{ b.food_name }} - {{ b.food_price }}$</label><hr>
+                            {% endfor %}
+                        </div>
+
+                        <div class="short-orders-list">
+                            <h1 class="order-header">Short Orders:</h1>
+                            {% for s in short_orders %}
+                                <input class="quantity-bar" type="number" id="{{ s.food_name }}_quantity" name="{{ s.food_name }}_quantity" min="1" max="100" value="1">
+                                <input class="check-box" type="checkbox" id="{{ s.food_name }}" name="{{ s.food_name }}" value="{{ s.food_price }}-{{ s.food_name }}">
+                                <label for="{{ s.food_name }}"> {{ s.food_name }} - {{ s.food_price }}$</label><hr>
+                            {% endfor %}
+                        </div>
+
+                        <div class="desserts-list">
+                            <h1 class="order-header">Desserts:</h1>
+                            {% for d in desserts %}
+                                <input class="quantity-bar" type="number" id="{{ d.food_name }}_quantity" name="{{ d.food_name }}_quantity" min="1" max="100" value="1">
+                                <input class="check-box" type="checkbox" id="{{ d.food_name }}" name="{{ d.food_name }}" value="{{ d.food_price }}-{{ d.food_name }}">
+                                <label for="{{ d.food_name }}"> {{ d.food_name }} - {{ d.food_price }}$</label><hr>
+                            {% endfor %}
+                        </div>
+
+                        <div class="add-ons-list">
+                            <h1 class="order-header">Add-ons:</h1>
+                            {% for a in add_ons %}
+                                <input class="quantity-bar" type="number" id="{{ a.food_name }}_quantity" name="{{ a.food_name }}_quantity" min="1" max="100" value="1">
+                                <input class="check-box" type="checkbox" id="{{ a.food_name }}" name="{{ a.food_name }}" value="{{ a.food_price }}-{{ a.food_name }}">
+                                <label for="{{ a.food_name }}"> {{ a.food_name }} - {{ a.food_price }}$</label><hr>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="submit-order">
+                            <button type="submit" class="btn btn-dark nt-btn">Submit Order</button>
+                    </div>
+                </form>
+
+                <div class="order-total col-lg-6">
+                    <img class="logo" src="{{ url_for('static', filename='images/restaurant-logo.png') }}">
+                    {% if foods %}
+                    <p class="order-info"> <strong>Date:</strong> {{ order_date }} <br> <strong>Order #:</strong>{{ order_num }}</p>
+                        <h1 class="order-header">Your Order/s:</h1>
+                        <div class="food-ordered-list">
+                            {% for food in foods %}
+                                <p>{{ food }}</p>
+                            {% endfor %}
+
+                            {% if total %}
+                                <p class="total-amount">Total Amount: {{ total }}$</p>
+                            {% endif %}
+                        </div>
+                        <a class="btn btn-dark" href="{{ url_for('check_out', amount=total) }}" role="button">Checkout</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% include "footer.html" %}

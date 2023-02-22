@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "header.html" %}
+</head>
+<body>
+    <header class="menu-list-header">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="mx-auto">
+                    <div class="menu-list-heading">
+                        <div class="menu-text">{{ type }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="menu-list">
+        <div class="container">
+            <div class="row">
+                {% for item in menu %}
+                <div class="card col-lg-3" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ item.food_image }}" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">{{ item.food_name }}</h5>
+                        <h5>{{ item.food_price }}$</h5>
+                        <p class="card-text">{{ item.food_description }}</p>
+                        </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% include "footer.html" %}

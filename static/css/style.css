@@ -1,0 +1,289 @@
+/* Header section */
+.navbar {
+    font-family: 'Nunito';
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.nav-item {
+    padding-right: 15px;
+}
+
+.login-logout {
+    position: relative;
+    left: 770px;
+}
+
+.logo {
+    width: 150px;
+    height: 80px;
+}
+
+/* Home page section */
+
+header.home-header {
+    font-family: 'Nunito';
+    position: relative;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    background: no-repeat center center;
+    background: rgba(0,0,0,0.5) url("https://img.freepik.com/free-photo/restaurant-interior_1127-3394.jpg?w=1060&t=st=1665655219~exp=1665655819~hmac=f8b9b5ec1320682e61a3d0157c1e6c3491e0044920c7b08600d459c9eb92887e");
+    background-size: cover;
+    background-blend-mode: darken;
+    background-attachment: scroll;
+}
+
+.intro-text {
+    font-weight: 700;
+    margin: 20px;
+    color: white;
+    width: 50%;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.login-order {
+   position: relative;
+    bottom: 5px;
+    left: 5px;
+    width: 220px;
+}
+
+.order-now {
+    position: relative;
+    bottom: 5px;
+    left: 5px;
+    width: 200px;
+}
+
+.menu-carousel {
+    font-family: 'Nunito';
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #FFD384;
+}
+
+.menu-div {
+    position: relative;
+    left: 100px;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.menu-header {
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.menu-desc {
+    width: 80%;
+}
+
+.image-div {
+    position: relative;
+    left: 96px;
+}
+
+.menu-image {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    max-width: 115px;
+}
+
+.sr-only {
+    display: none;
+}
+
+/* Menu Section */
+header.menu-list-header {
+    font-family: 'Nunito';
+    position: relative;
+    padding-top: 14rem;
+    padding-bottom: 12rem;
+    background: no-repeat center center;
+    background: rgba(0,0,0,0.5) url("https://i0.wp.com/post.greatist.com/wp-content/uploads/sites/2/2020/02/GRT-filipino-food-dishes-1296x728-header.jpg?w=1155&h=1528");
+    background-size: cover;
+    background-blend-mode: darken;
+    background-attachment: scroll;
+}
+
+.menu-text {
+    text-align: center;
+    font-weight: 700;
+    font-size: 100px;
+    color: white;
+}
+
+#menu-list {
+    font-family: 'Nunito';
+    background-color: #FFD384;
+    padding: 50px 20px;
+}
+
+.card {
+    margin: 20px;
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+.card-img-top {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    padding-top: 10px;
+}
+
+/* Register and Login Section */
+.credentials-section {
+    padding-top: 12rem;
+    padding-bottom: 7rem;
+    background-color: #FFD384;
+    font-family: 'Nunito';
+    font-size: 20px;
+}
+
+.form-header {
+    padding-bottom: 30px;
+    font-weight: 700;
+}
+
+input[type=text], input[type=password]{
+    width: 65%;
+    margin: 20px 0px;
+}
+
+.form-inputs p {
+    padding-top: 20px;
+}
+
+/* Order Section */
+.order-form {
+    font-family: 'Nunito';
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+    background-color: #FFD384;
+}
+
+.order-info {
+    padding-top: 15px;
+}
+
+.order-list {
+    height: 500px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+
+.order-header {
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.form-list {
+    padding-bottom: 20px;
+}
+
+.form-list input {
+    margin: 10px 0px;
+}
+
+.check-box {
+    height: 15px;
+    width: 35px;
+}
+
+.quantity-bar {
+    width: 35px;
+    height: 20px;
+}
+
+hr {
+    width: 400px;
+}
+
+.order-total {
+    text-align: center;
+}
+
+.food-ordered-list {
+    position: relative;
+    left: 8px;
+}
+
+.total-amount {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.submit-order {
+    padding-top: 20px;
+}
+
+/* Success and Cancel Section */
+.success-cancel {
+    font-family: 'Nunito';
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    background-color: #FFD384;
+    text-align: center;
+}
+
+.top-most {
+    font-size: 50px;
+    padding-bottom: 40px;
+}
+
+/* Footer Section */
+footer {
+    font-family: 'Nunito';
+    padding-top: 3rem;
+    padding-bottom: 0.2rem;
+    background-color: #F5F6ED;
+}
+
+.footer-div {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    font-size: 20px;
+}
+
+.with-border {
+    border-right: 1px solid black;
+    height: 240px;
+}
+
+.footer-logo {
+    width: 250px;
+    height: 140px;
+    margin-bottom: 15px;
+}
+
+.footer-title {
+    font-weight: 700;
+}
+
+.icons {
+    padding-right: 30px;
+    color: black;
+}
+
+.icons:hover {
+    color: #D5AA72;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-hr {
+    margin: auto;
+    width: 34%;
+    margin-top: 20px;
+}

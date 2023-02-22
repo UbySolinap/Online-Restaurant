@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    {% include "header.html" %}
+  </head>
+  <body>
+    <section class="success-cancel" id="success-order">
+        <div class="container">
+            <div class="row">
+                <h1 class="top-most">Your order was cancelled.</h1>
+            </div>
+        </div>
+        <a class="btn btn-dark btn-lg return-button" href="{{ url_for('home') }}" role="button">Return Home</a>
+    </section>
+
+
+  {% include "footer.html" %}

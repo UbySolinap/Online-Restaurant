@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "header.html" %}
+</head>
+<body>
+    <header class="home-header">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="mx-auto">
+                    <div class="site-heading">
+                        {% if not current_user.is_authenticated %}
+                        <h1 class="intro-text">Ready to taste our Filipino dishes anytime anywhere? What are you waiting for? <a class="login-order btn btn-outline-light btn-lg" href="{{ url_for('login') }}">Log in now to order!</a></h1>
+                        {% else %}
+                        <h1 class="intro-text">Ready to taste our Filipino dishes anytime anywhere? What are you waiting for? <a class="order-now btn btn-outline-light btn-lg" href="{{ url_for('order') }}">Order Now!</a></h1>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="menu-carousel">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="menu-div col-lg-6">
+                        <h2 class="menu-header">Breakfast</h2>
+                        <p class="menu-desc">Filipinos definitely believe to eat like kings during breakfast because this gives us more time
+                            to talk and enjoy with each other and at the same time, Have enough energy before starting a long day.</p>
+                        <a class="btn btn-dark btn-lg menu-button" href="{{ url_for('menu', category='Breakfast') }}" role="button">See Menu</a>
+                    </div>
+                    <div class="image-div col-lg-6">
+                        <img class="menu-image" src="{{ url_for('static', filename='images/breakfast-home.jpg') }}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="menu-div col-lg-6">
+                        <h2 class="menu-header">Short Orders</h2>
+                        <p class="menu-desc">A typical Filipino lunch is composed of a food variant (or two for some) and
+                            rice, sometimes with soup. Whether grilled, stewed, or fried, rice is eaten with everything.</p>
+                        <a class="btn btn-dark btn-lg menu-button" href="{{ url_for('menu', category='Short Orders') }}" role="button">See Menu</a>
+                    </div>
+                    <div class="image-div col-lg-6">
+                        <img class="menu-image" src="{{ url_for('static', filename='images/lunch-home.jpg') }}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="menu-div col-lg-6">
+                        <h2 class="menu-header">Desserts</h2>
+                        <p class="menu-desc">Filipinos are dessert-lovers, so they have a myriad of mouthwatering treats to offer.
+                            Unlike other cuisines that offer light and refreshing treats, Filipino desserts are often made from rice and starch crops.</p>
+                        <a class="btn btn-dark btn-lg menu-button" href="{{ url_for('menu', category='Desserts') }}" role="button">See Menu</a>
+                    </div>
+                    <div class="image-div col-lg-6">
+                        <img class="menu-image" src="{{ url_for('static', filename='images/desserts-home.jpg') }}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="menu-div col-lg-6">
+                        <h2 class="menu-header">Add-ons</h2>
+                        <p class="menu-desc">Filipino food is a mixture of sweet, salty, and sour flavours. Cooking and
+                            eating in the Philippines has traditionally been an informal and communal affair centered
+                            around the family kitchen. Food tends to be served all at once and not in courses.</p>
+                        <a class="btn btn-dark btn-lg menu-button" href="{{ url_for('menu', category='Add-ons') }}" role="button">See Menu</a>
+                    </div>
+                    <div class="image-div col-lg-6">
+                        <img class="menu-image" src="{{ url_for('static', filename='images/addons-home.jpg') }}">
+                    </div>
+                </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+    </section>
+
+{% include "footer.html" %}
