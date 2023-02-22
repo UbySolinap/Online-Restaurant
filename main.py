@@ -17,7 +17,7 @@ import os
 API_KEY = "sk_test_51LueCAG0lu41k8edSvtV9F3hnErzPZkaUDdHVGfOhr9uLlttatzqaFlZzEVS45C3QQf48z2kvLSzYmtK1qiG7pyY002ORc0hPo"
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'handsomestoic'
+app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///menu.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
